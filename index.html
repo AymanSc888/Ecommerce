@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="css/sty.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <h2 class="col-6 pt-1 fw-7">Ecommerce</h2>
+          <div class="col-6 text-right pt-1 fw-7">
+            <i
+              id="cart"
+              data-toggle="collapse"
+              data-target="#cart-shopping"
+              class="fa-solid fa-bag-shopping"
+            ></i>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="collapse container" id="cart-shopping">
+      <h2 class="pt-2 pb-2 text-center">Your Cart</h2>
+      <div class="items container"></div>
+      <div class="calc container">
+        <hr class="bg-dark"/>
+        <span id="Total" class="text-danger fw-6"></span>
+      <div>
+        <div class="btn btn-danger" onclick="buy()">Buy Now</div>
+        <div class="btn btn-dark" onclick="deleteAll()">Delete All</div>
+      </div>
+      </div>
+      
+    </div>
+    <div class="title pt-2 pb-4">
+      <h1 class="text-center">Shop Products</h1>
+    </div>
+    <div class="container caps pt-2 pb-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card" data-toggle="collapse" data-target="#caps">
+            <img class="card-img-top " src="img/page5.jpg" alt="CAPS" />
+            <div class="card-body border border-dark">
+              <h3 class="card-title">CAPS</h3>
+              <p class="card-text">8 CAPS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="caps" class="collapse">
+        <div class="container m-2">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="img/Mens Cotton Baseball Cap.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Mens Cotton Cap</h3>
+                  <p class="card-text">240 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="1"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cap7.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Trucker Yellow Cap</h3>
+                  <p class="card-text">190 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="2"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cap6.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Black Leather Cap</h3>
+                  <p class="card-text">345 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="3"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cap1.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Women Sun-Hat Solid</h3>
+                  <p class="card-text">100 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="4"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cap2.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Mens Ice Cap Cotton</h3>
+                  <p class="card-text">110 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="5"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cap3.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Gucci Original hat</h3>
+                  <p class="card-text">350 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="6"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cap4.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Summer Baseball Cap</h3>
+                  <p class="card-text">97 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="7"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cap5.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Black Sun Protection</h3>
+                  <p class="card-text">250 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="8"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container T-shirts pt-2 pb-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card" data-toggle="collapse" data-target="#sports-T">
+            <img class="card-img-top" src="img/page2.jpg" alt="Sports T-Shirt" />
+            <div class="card-body border border-dark">
+              <h3 class="card-title">Sports T-Shirt</h3>
+              <p class="card-text">14 T-Shirts</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="sports-T" class="collapse">
+        <div class="container m-2">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/ahly.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Alahly 2023 T-Shirt</h3>
+                  <p class="card-text">230 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="10"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/zamalek.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Zamalek 2023 T-Shirt</h3>
+                  <p class="card-text">240 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="11"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/t-shirt spo.jfif" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Men’s Running Sports</h3>
+                  <p class="card-text">800 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="12"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/BARCA.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Barca 2015 T-Shirt</h3>
+                  <p class="card-text">240 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="13"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/CHELESE.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Chelese 2022 T-Shirt</h3>
+                  <p class="card-text">250 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="14"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/CITY.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Man City T-Shirt</h3>
+                  <p class="card-text">260 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="15"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/HILAL.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">AL-Hilal 2024 T-Shirt</h3>
+                  <p class="card-text">240 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="16"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/JUV.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">JUVENTUS T-Shirt</h3>
+                  <p class="card-text">260 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="17"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/madrid.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">MADRID T-Shirt</h3>
+                  <p class="card-text">280 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="18"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/SPORTING.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Sporting T-Shirt</h3>
+                  <p class="card-text">260 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="19"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/SALAH.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Salah T-Shirt</h3>
+                  <p class="card-text">240 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="20"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/ZMA.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Zamalek T-Shirt</h3>
+                  <p class="card-text">260 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="21"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/NAPOLI.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Napoli T-Shirt</h3>
+                  <p class="card-text">240 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="22"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/CR7 T.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Ronaldo T-Shirt</h3>
+                  <p class="card-text">290 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="23"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container shoes pt-2 pb-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card border border-dark" data-toggle="collapse" data-target="#shoes">
+            <img class="card-img-top" src="img/st2.jpg" alt="Shoes" />
+            <div class="card-body">
+              <h3 class="card-title">Shoes</h3>
+              <p class="card-text">8 Shoes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="shoes" class="collapse">
+        <div class="container m-2">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/football SHOES.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Blue Bird Stars</h3>
+                  <p class="card-text">390 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="25"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="img/Simple Casual Shoe.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Simple Casual Shoe</h3>
+                  <p class="card-text">290 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="26"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="img/st1.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Nike Football Stars</h3>
+                  <p class="card-text">2000 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="27"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="img/st2.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Adidas Messi 2023</h3>
+                  <p class="card-text">1500 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="28"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="img/st3.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Nike Gold Stars</h3>
+                  <p class="card-text">1900 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="29"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img
+                  class="card-img-top"
+                  src="img/st4.jpg"
+                  alt=""
+                />
+                <div class="card-body">
+                  <h3 class="card-title">Nike Phantom Stars</h3>
+                  <p class="card-text">1200 EGP</p>
+                  <button
+                    class="btn btn-dark"
+                    value="30"
+                    onclick="addItem(this.value)"
+                  >
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/Blue Bird Romba.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Blue Bird Romba</h3>
+                  <p class="card-text">390 EGP</p>
+                  <button class="btn btn-dark" value="31" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/cr7 stars.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">CR7 Football Stars</h3>
+                  <p class="card-text">2000 EGP</p>
+                  <button class="btn btn-dark" value="32" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container accessories pt-2 pb-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card border border-dark" data-toggle="collapse" data-target="#accessories">
+            <img class="card-img-top" src="img/page6.jpg" alt="accessories" />
+            <div class="card-body">
+              <h3 class="card-title">accessories</h3>
+              <p class="card-text">9 accessorie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="accessories" class="collapse">
+        <div class="container m-2">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/watch.png" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Smart Watch GS8 </h3>
+                  <p class="card-text">1200 EGP</p>
+                  <button class="btn btn-dark" value="34" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/bracelet.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Men's Bracelet</h3>
+                  <p class="card-text">250 EGP</p>
+                  <button class="btn btn-dark" value="35" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/ear.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Realme T110</h3>
+                  <p class="card-text">1200 EGP</p>
+                  <button class="btn btn-dark" value="36" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/headphone.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">HeadPhone Sd-1002</h3>
+                  <p class="card-text">500 EGP</p>
+                  <button class="btn btn-dark" value="37" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/earpodes.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">M-10 EarPods</h3>
+                  <p class="card-text">250 EGP</p>
+                  <button class="btn btn-dark" value="38" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/smart watch.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Apple Watch</h3>
+                  <p class="card-text">2500 EGP</p>
+                  <button class="btn btn-dark" value="39" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/watch1.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">G-Shock Watch</h3>
+                  <p class="card-text">1500 EGP</p>
+                  <button class="btn btn-dark" value="40" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/watch2.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Analoge Watch</h3>
+                  <p class="card-text">2000 EGP</p>
+                  <button class="btn btn-dark" value="41" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/watch3.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Sports Watch</h3>
+                  <p class="card-text">600 EGP</p>
+                  <button class="btn btn-dark" value="42" onclick="addItem(this.value)">
+                  Book
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container shirts pt-2 pb-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="card border border-dark" data-toggle="collapse" data-target="#shirts">
+            <img class="card-img-top" src="img/page3.jpg" alt="shirts" />
+            <div class="card-body">
+              <h3 class="card-title">Shirts</h3>
+              <p class="card-text">7 Shirts</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="shirts" class="collapse">
+        <div class="container m-2">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/Oxford shirt.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Oxford Men`s Shirt</h3>
+                  <p class="card-text">280 EGP</p>
+                  <button class="btn btn-dark" value="44" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/Oxford shirt2.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Oxford black shirt</h3>
+                  <p class="card-text">300 EGP</p>
+                  <button class="btn btn-dark" value="45" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/Clever Shirt.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Clever Men`s Shirt</h3>
+                  <p class="card-text">350 EGP</p>
+                  <button class="btn btn-dark" value="46" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/shirt1.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">American Eagle shirt</h3>
+                  <p class="card-text">1500 EGP</p>
+                  <button class="btn btn-dark" value="47" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/shirt2.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Hooded Cardigan Jacket</h3>
+                  <p class="card-text">1200 EGP</p>
+                  <button class="btn btn-dark" value="48" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/shirt3.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Polo_Assn Shirt</h3>
+                  <p class="card-text">900 EGP</p>
+                  <button class="btn btn-dark" value="49" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+              <div class="card">
+                <img class="card-img-top" src="img/shirt4.jpg" alt="" />
+                <div class="card-body">
+                  <h3 class="card-title">Jack & Jones Shirt</h3>
+                  <p class="card-text">700 EGP</p>
+                  <button class="btn btn-dark" value="50" onclick="addItem(this.value)">
+                    Book
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="js/javaS.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
